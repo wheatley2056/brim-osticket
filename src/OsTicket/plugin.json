@@ -1,0 +1,24 @@
+{
+  "id": "de.brim.osticket",
+  "name": "osTicket",
+  "version": "1.0.0",
+  "entry": "BrimOsTicket.exe",
+  "api": "1",
+  "slots": ["compact.leading", "compact.trailing"],
+  "permissions": ["network"],
+  "widgets": [
+    {"id": "tickets", "name": "Tickets", "description": "Die ersten Tickets einer Warteschlange; ein Klick öffnet das Ticket", "glyph": "", "sizes": ["large", "small", "medium", "wide", "full"]},
+    {"id": "overview", "name": "Ticket-Übersicht", "description": "Offene, eigene und überfällige Tickets auf einen Blick", "glyph": "", "sizes": ["medium", "small", "wide"]}
+  ],
+  "settings": [
+    {"key": "url", "type": "string", "label": "Adresse von osTicket (z. B. https://support.firma.de)", "default": ""},
+    {"key": "username", "type": "string", "label": "Benutzername oder E-Mail des Agenten", "default": ""},
+    {"key": "password", "type": "password", "label": "Passwort des Agenten", "default": ""},
+    {"key": "queue", "type": "string", "label": "Warteschlange für Notch, Liste und Meldungen: Nummer oder Name (1 = Offen)", "default": "1"},
+    {"key": "myQueue", "type": "string", "label": "Deine Tickets: Nummer oder Name (6 = Mir zugewiesen, leer = aus)", "default": "6"},
+    {"key": "notch", "type": "bool", "label": "Anzahl der Tickets in der Notch zeigen", "default": true},
+    {"key": "notchWhenEmpty", "type": "bool", "label": "… auch wenn nichts offen ist", "default": false},
+    {"key": "alerts", "type": "bool", "label": "Melden, wenn ein neues Ticket kommt oder dir eins zugewiesen wird", "default": true},
+    {"key": "refreshSeconds", "type": "string", "label": "Alle wie viele Sekunden nachsehen (ab 30)", "default": "60"}
+  ]
+}

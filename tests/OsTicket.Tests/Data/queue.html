@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en_US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Open Tickets :: Support Ticket System</title>
+    <meta name="csrf_token" content="c0ffee1234" />
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <p id="info" class="pull-right no-pjax">Welcome, <strong>Tobias</strong>.</p>
+    </div>
+    <div id="pjax-container" class="">
+    <ul id="nav">
+        <li class="active "><a href="/support/scp/tickets.php" >Tickets</a></li>
+    </ul>
+    <nav class="">
+    <ul id="sub_nav">
+<li class="top-queue item child active">
+  <a href="tickets.php?queue=1"
+    class="Ticket"><i class="small icon-sort-down pull-right"></i>Open
+    <span id="queue-count-bucket" class="hidden">
+      (<span class="queue-count"
+        data-queue-id="1"><span class="faded-more"></span>
+      </span>)
+    </span>
+  </a>
+  <div class="customQ-dropdown">
+    <ul class="scroll-height">
+      <!-- Start Dropdown and child queues -->
+<!-- SubQ class: only if top level Q has subQ -->
+<li >
+
+  <span class="personalQmenu
+    pull-right newItemQ queue-count"
+    data-queue-id="2"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate  active" href="tickets.php?queue=2" title="Open">
+      Open
+          </a>
+</li>
+<li >
+  <span class="personalQmenu
+    pull-right newItemQ queue-count"
+    data-queue-id="3"><span class="faded-more">-</span>
+  </span>
+  <a class="truncate " href="tickets.php?queue=3" title="Answered">
+      Answered
+          </a>
+</li>
+<li >
+  <span class="personalQmenu
+    pull-right newItemQ queue-count"
+    data-queue-id="4"><span class="faded-more">-</span>
+  </span>
+  <a class="truncate " href="tickets.php?queue=4" title="Overdue">
+      Overdue
+          </a>
+</li>
+    </ul>
+  </div>
+</li>
+<li class="top-queue item ">
+  <a href="tickets.php?queue=5"
+    class="Ticket"><i class="small icon-sort-down pull-right"></i>My Tickets
+  </a>
+  <div class="customQ-dropdown">
+    <ul class="scroll-height">
+<li >
+  <span class="personalQmenu
+    pull-right newItemQ queue-count"
+    data-queue-id="6"><span class="faded-more">-</span>
+  </span>
+  <a class="truncate " href="tickets.php?queue=6" title="Assigned to Me">
+      Assigned to Me
+          </a>
+</li>
+<li >
+  <span class="personalQmenu
+    pull-right newItemQ queue-count"
+    data-queue-id="7"><span class="faded-more">-</span>
+  </span>
+  <a class="truncate " href="tickets.php?queue=7" title="Assigned to Teams">
+      Assigned to Teams
+          </a>
+</li>
+<li class="personalQ"></li>
+<li >
+  <span class="personalQmenu
+    pull-right newItemQ queue-count"
+    data-queue-id="15"><span class="faded-more">-</span>
+  </span>
+  <a class="truncate " href="tickets.php?queue=15" title="Drucker &amp; Scanner">
+      Drucker &amp; Scanner
+          </a>
+</li>
+    </ul>
+  </div>
+</li>
+<li class="primary-only item ">
+  <a href="tickets.php?queue=adhoc" class="Ticket"><i class="icon-search"></i>Search</a>
+</li>
+    </ul>
+    </nav>
+<div id="content">
+<form action="?" method="POST" name='tickets' id="tickets">
+<input type="hidden" name="__CSRFToken__" value="c0ffee1234" /> <input type="hidden" name="a" value="mass_process" >
+ <input type="hidden" name="do" id="action" value="" >
+
+<table class="list queue tickets" border="0" cellspacing="1" cellpadding="2" width="940">
+  <thead>
+    <tr>
+        <th style="width:12px"></th>
+<th width="100" data-id="1"><a href="?queue=1&amp;p=1&amp;dir=1&amp;sort=1" class="1">Ticket</a></th><th width="150" data-id="10"><a href="?queue=1&amp;p=1&amp;dir=1&amp;sort=10" class="1">Last Updated</a></th><th width="300" data-id="3"><a href="?queue=1&amp;p=1&amp;dir=1&amp;sort=3" class="1">Subject</a></th><th width="185" data-id="4"><a href="?queue=1&amp;p=1&amp;dir=1&amp;sort=4" class="1">From</a></th><th width="85" data-id="5"><a href="?queue=1&amp;p=1&amp;dir=1&amp;sort=5" class="1">Priority</a></th><th width="160" data-id="8"><a href="?queue=1&amp;p=1&amp;dir=1&amp;sort=8" class="1">Assigned To</a></th>    </tr>
+  </thead>
+  <tbody>
+<tr>        <td><input type="checkbox" class="ckb" name="tids[]"
+            value="1043" /></td>
+<td style="font-weight:bold"><div style="font-weight:bold"><span class="Icon webTicket"></span><a style="display: inline" class="preview" data-preview="#tickets/1043/preview" href="/support/scp/tickets.php?id=1043">000231</a></div></td><td>27.10.26 08:14</td><td style="font-weight:bold"><div style="font-weight:bold"><span class="pull-left"><span class="Icon overdueTicket"></span></span><span class="pull-right"><small class="faded-more"><i class="icon-comments-alt"></i> 3</small></span><span class="truncate" style="max-width:250px"><a style="display:inline" href="/support/scp/tickets.php?id=1043">Drucker im 2. OG druckt nicht &amp; blinkt</a></span><i class="small icon-paperclip icon-flip-horizontal" data-toggle="tooltip" title="2"></i></div></td><td><span class="pull-right faded-more" data-toggle="tooltip" title="2"><i class="icon-group"></i></span>Max Muster</td><td><div style="background-color:#ffcccc;"><div style="background-color:#ffcccc;">High</div></div></td><td>Tobias Kern</td></tr><tr>        <td><input type="checkbox" class="ckb" name="tids[]"
+            value="1040" /></td>
+<td><span class="Icon emailTicket"></span><a style="display: inline" class="preview" data-preview="#tickets/1040/preview" href="/support/scp/tickets.php?id=1040">000228</a></td><td>26.10.26 16:02</td><td><span class="truncate" style="max-width:300px"><a style="display:inline" href="/support/scp/tickets.php?id=1040">Passwort zurücksetzen</a></span></td><td>Erika Beispiel</td><td>Normal</td><td></td></tr>  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="7">
+        Select:&nbsp;
+        <a id="selectAll" href="#ckb">All</a>&nbsp;&nbsp;
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
