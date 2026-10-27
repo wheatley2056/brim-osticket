@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Quelle, Ablauf und Ansichten des osTicket-Plugins mit nachgebauten Seiten des Agenten-Panels; ohne Netz. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\src\OsTicket\*.cs" Exclude="..\..\src\OsTicket\Program.cs" LinkBase="OsTicket" />
+    <None Include="Data\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(BrimRoot)\src\Brim.Sdk\Brim.Sdk.csproj" />
+  </ItemGroup>
+</Project>
